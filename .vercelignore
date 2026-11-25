@@ -1,0 +1,8 @@
+# 로컬 비밀값·테스트 산출물은 업로드하지 않음
+.env
+.env.local
+.env.*.local
+test-results
+node_modules
+.next
+submission

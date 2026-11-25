@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<title>Re:Life AI 기획서</title>
+<style>
+  @page { size: A4; margin: 13mm 14mm; }
+  * { box-sizing: border-box; }
+  body { font-family: "Noto Sans KR", "Malgun Gothic", sans-serif; color: #1d2b2a; font-size: 9.6pt; line-height: 1.5; margin: 0; word-break: keep-all; }
+  h1 { font-size: 20pt; margin: 0; color: #1f5e52; letter-spacing: -0.5px; }
+  .slogan { font-size: 11pt; color: #b4561b; font-weight: 700; margin: 2px 0 6px; }
+  .meta { font-size: 8.6pt; color: #55625f; margin-bottom: 8px; }
+  h2 { font-size: 11.5pt; color: #fff; background: #1f5e52; padding: 3px 9px; border-radius: 5px; margin: 10px 0 5px; }
+  h3 { font-size: 10pt; margin: 6px 0 2px; color: #1f5e52; }
+  p { margin: 3px 0; }
+  ul { margin: 3px 0; padding-left: 16px; }
+  li { margin: 1px 0; }
+  table { width: 100%; border-collapse: collapse; font-size: 8.8pt; margin: 4px 0; }
+  th, td { border: 1px solid #c9d6d3; padding: 3px 6px; vertical-align: top; text-align: left; }
+  th { background: #e8f2ef; }
+  .flow { display: flex; gap: 4px; margin: 5px 0; }
+  .flow div { flex: 1; background: #e8f2ef; border-radius: 6px; padding: 4px 5px; font-size: 8.4pt; text-align: center; }
+  .flow div b { display: block; color: #1f5e52; font-size: 8.8pt; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .box { border: 1px solid #c9d6d3; border-radius: 6px; padding: 5px 8px; }
+  .kpi { display: flex; gap: 6px; margin: 4px 0; break-inside: avoid; }
+  table, .box, .flow { break-inside: avoid; }
+  .kpi div { flex: 1; border: 1px solid #f0c9a8; background: #fff6ee; border-radius: 6px; padding: 4px; text-align: center; font-size: 8.3pt; }
+  .kpi b { display: block; font-size: 12pt; color: #b4561b; }
+  .note { font-size: 8pt; color: #66716e; }
+  .page-break { break-before: page; }
+</style>
+</head>
+<body>
+  <h1>Re:Life AI — 중장년 인생 2막 설계 AI Agent</h1>
+  <div class="slogan">당신의 경험을 새로운 가능성으로, 인생 2막을 설계하다</div>
+  <div class="meta">배포 데모 https://relife-ai-lemon.vercel.app · 핵심 AI: Liner Deep Research Agent API · Next.js + Supabase + Vercel</div>
+
+  <h2>1. 누가, 어떤 문제로, 얼마나 불편한가</h2>
+  <p><b>대상</b>: 퇴직을 앞둔 40~60대 재직자, 퇴직 후 재취업 희망자, 경력 전환·창업·프리랜서 희망자, 은퇴 및 노후 생활 준비자, 아직 방향을 정하지 못한 중장년.</p>
+  <ul>
+    <li><b>정보가 기관마다 흩어져 있음</b>: 재취업(고용24·중장년내일센터), 직업훈련(국민내일배움카드·폴리텍), 평생교육(K-MOOC·평생학습계좌제), 자격증(큐넷), 연금(국민연금공단·금융감독원), 창업(K-Startup), 복지(복지로), 지자체 일자리센터까지 10곳 이상을 직접 찾아 비교해야 합니다.</li>
+    <li><b>내 상황에 맞는지 판단하기 어려움</b>: 나이·지역·경력·생활비·준비 기간에 따라 신청 자격과 우선순위가 다르지만, 이를 한 번에 정리해 주는 곳이 없습니다.</li>
+    <li><b>정보를 찾아도 실행으로 이어지지 않음</b>: 모집 기간을 놓치거나, 무엇부터 해야 할지 계획이 없어 준비가 미뤄집니다. 디지털 활용이 익숙하지 않은 분들에게는 검색 자체가 부담입니다.</li>
+  </ul>
+
+  <h2>2. 에이전트의 해결 방식</h2>
+  <p>단순 챗봇이 아니라 <b>진단 → 조사 → 전략 → 실행 → 관리 → 재설계</b>가 이어지는 AI Agent 서비스입니다.</p>
+  <div class="flow">
+    <div><b>① 생애전환 진단</b>5단계 설문 (모두 선택 입력, 건너뛰기 가능)</div>
+    <div><b>② 프로필 구조화</b>누락 항목 확인, 익명화·최소화</div>
+    <div><b>③ AI 맞춤 리서치</b>Liner Deep Research로 최신 공식 정보 조사</div>
+    <div><b>④ 전략 비교</b>3개 이상 시나리오, 장단점·기간·비용·위험</div>
+    <div><b>⑤ 실행 로드맵</b>이번 주~12개월 할 일, 체크리스트·진행률</div>
+    <div><b>⑥ 코치·재조사</b>저장 결과로 답변, 필요 시 확인 후 재조사</div>
+  </div>
+  <div class="grid2">
+    <div class="box">
+      <h3>사용자가 받는 것</h3>
+      <ul>
+        <li>공식 출처가 연결된 개인 맞춤 보고서 (인용 번호를 누르면 원문)</li>
+        <li>추천 일자리·교육·자격증·정부지원사업 카드 — <b>모집 중 / 모집 예정 / 종료 / 확인 필요</b>를 구분</li>
+        <li>선택한 전략으로 자동 생성되는 실행 로드맵, 항목마다 기관 공식 사이트 링크</li>
+        <li>큰 글씨·큰 버튼·단계별 화면, 키보드·스크린 리더 지원</li>
+      </ul>
+    </div>
+    <div class="box">
+      <h3>신뢰와 안전</h3>
+      <ul>
+        <li>확인되지 않은 모집일·지원금·비용은 만들지 않고 "확인 필요"로 표기</li>
+        <li>정량 점수는 평가 근거가 있을 때만 표시하고 추정치임을 명시</li>
+        <li>외부 전송 전 명시 동의(경제 정보·경력 원문은 별도 선택), 이름·연락처 미수집</li>
+        <li>검색 결과 속 문장은 데이터로만 취급해 앱 동작을 바꿀 수 없음</li>
+        <li>샘플 결과는 항상 "데모 데이터"로 표시</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>3. Liner API 활용 방식</h2>
+  <table>
+    <tr><th style="width:24%">활용 지점</th><th>방법</th></tr>
+    <tr><td>맞춤 리서치 (핵심)</td><td>진단 결과로 만든 익명 프로필과 조사 지시문(12개 분석 항목, 우선 조사 기관 14곳, 모집 상태 구분 규칙)을 <b>Deep Research Agent API</b>에 서버에서만 전송 (<code>stream: true</code>, <code>lang: ko</code>, <code>request_id</code>)</td></tr>
+    <tr><td>실시간 진행 화면</td><td>SSE 이벤트를 전용 파서로 처리 — <code>data-search-tasks</code>, 참조의 실제 검색어, <code>data-search-references</code>로 조사 항목·검색 단계·출처를 표시하고 <code>text-delta</code>로 보고서를 실시간 출력. 가짜 진행률 없음</td></tr>
+    <tr><td>보고서 → 전략 → 로드맵</td><td>인용 <code>((n))</code>을 n번째 출처와 연결해 저장, 보고서 끝 구조화 블록(JSON)을 스키마 검증해 전략 비교·추천 카드·로드맵 생성. <b>별도 AI 모델을 추가 호출하지 않음</b></td></tr>
+    <tr><td>AI 코치</td><td>평소에는 저장된 보고서로 무료 답변, 최신 정보가 필요할 때만 사용자 확인 후 Deep Research 재호출</td></tr>
+    <tr><td>비용·운영 관리</td><td>사용자별 일일 호출 제한, 같은 조건 결과 캐시(7일), 진행 중 중복 실행 차단, 유료 호출 전 확인 창, 관리자 화면에서 <code>credits/balance</code>로 잔여 크레딧 확인</td></tr>
+  </table>
+  <div class="kpi">
+    <div><b>144~171초</b>실제 리서치 1회 소요 (3회 측정)</div>
+    <div><b>119~166개</b>리서치 1회당 수집 출처</div>
+    <div><b>35개 전부</b>본문 인용과 출처 원문 연결 확인</div>
+    <div><b>1회</b>보고서 1건당 유료 호출 (전략·로드맵은 추가 호출 없음)</div>
+  </div>
+  <p class="note">수치는 2026-11-25 실제 Liner API 호출로 측정한 결과입니다.</p>
+
+  <h2>4. 다른 조직·직무로의 확장 가능성</h2>
+  <table>
+    <tr><th style="width:24%">확장 대상</th><th>활용 방식</th></tr>
+    <tr><td>중장년내일센터·지자체 일자리센터</td><td>상담사가 상담 전에 내담자 맞춤 보고서를 받아 상담 시간을 실행 계획 수립에 집중. 상담사용 관리자 화면으로 진행률 확인</td></tr>
+    <tr><td>기업 인사팀 (전직지원)</td><td>퇴직 예정 임직원 대상 전직지원 프로그램에 적용. 회사 내 교육·제도를 우선 조사 기관에 추가</td></tr>
+    <tr><td>대학 평생교육원·평생학습관</td><td>수강생 진로 진단과 과정 추천, 수료 후 로드맵 관리</td></tr>
+    <tr><td>금융기관 노후설계 상담</td><td>연금·생활비 점검 항목을 상담 전 준비 자료로 활용 (상품 권유 없이 정보 제공)</td></tr>
+    <tr><td>다른 생애전환 대상</td><td>경력단절 여성, 사회초년생, 귀농·귀촌 희망자 등 — 진단 항목과 우선 조사 기관만 바꾸면 같은 에이전트 구조를 그대로 재사용</td></tr>
+  </table>
+  <p class="note">구조: 진단 설문·조사 지시문·우선 기관 목록이 별도 모듈로 분리되어 있어 대상과 지역을 바꾸기 쉽습니다. 장시간 리서치가 많아지면 큐·백그라운드 워커 구조로 확장합니다.</p>
+</body>
+</html>

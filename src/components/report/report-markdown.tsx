@@ -45,7 +45,7 @@ function ReportMarkdownImpl({ markdown, references }: { markdown: string; refere
 
   return (
     <div className="report-md">
-      <ReactMarkdown remarkPlugins={[remarkGfm]} components={components} skipHtml>
+      <ReactMarkdown remarkPlugins={[[remarkGfm, { singleTilde: false }]]} components={components} skipHtml>
         {md}
       </ReactMarkdown>
     </div>

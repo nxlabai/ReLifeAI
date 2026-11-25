@@ -1,0 +1,14 @@
+{
+  "name": "relife-ai-demo-video",
+  "private": true,
+  "type": "module",
+  "description": "Re:Life AI 해커톤 데모 영상 제작 스크립트 (서비스 코드와 분리)",
+  "scripts": {
+    "record": "node record.mjs",
+    "edit": "node edit.mjs"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.3.0",
+    "playwright-core": "^1.65.1"
+  }
+}

@@ -52,3 +52,9 @@ next-env.d.ts
 
 # 로컬 에디터 설정
 /.claude
+
+# 데모 영상 산출물·도구
+/demo-video/node_modules
+/demo-video/output
+/demo-video/check
+/demo-video/output_v1
